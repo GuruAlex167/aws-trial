@@ -5,11 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Amplify from "aws-amplify";
 import awsExports from "./aws-exports";
+import { HeroLayout2 } from "./ui-components";
 Amplify.configure(awsExports);
+
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <HeroLayout2 />
     <App />
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

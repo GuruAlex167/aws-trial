@@ -3,10 +3,25 @@
   "serviceConfiguration": {
     "apiName": "lhb",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "/home/alex/lhb/amplify/backend/api/lhb/schema.graphql",
+    "gqlSchemaPath": "/tmp/amplify-d4a7e3a4-ff29-460d-b027-53c263752922/amplify/backend/api/lhb/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
-      "expirationTime": 7
-    }
+      "keyDescription": "api key description",
+      "expirationTime": 30
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      },
+      {
+        "mode": "AMAZON_COGNITO_USER_POOLS",
+        "cognitoUserPoolId": "authlhbb244d705"
+      }
+    ]
   }
 }

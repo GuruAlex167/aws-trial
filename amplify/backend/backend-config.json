@@ -8,10 +8,21 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 7
+              "apiKeyExpirationDays": 30,
+              "description": "api key description"
             }
           },
-          "additionalAuthenticationProviders": []
+          "additionalAuthenticationProviders": [
+            {
+              "authenticationType": "AWS_IAM"
+            },
+            {
+              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+              "userPoolConfig": {
+                "userPoolId": "authlhbb244d705"
+              }
+            }
+          ]
         }
       }
     }
@@ -47,6 +58,14 @@
       "service": "amplifyhosting",
       "type": "cicd",
       "lastPushTimeStamp": "2022-01-24T22:44:18.342Z"
+    }
+  },
+  "storage": {
+    "lhb8b84985d": {
+      "service": "S3",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
     }
   }
 }

@@ -4,7 +4,10 @@ import Amplify, { API, graphqlOperation } from 'aws-amplify'
 import { createTodo } from './graphql/mutations'
 import { listTodos } from './graphql/queries'
 import awsExports from "./aws-exports";
-import { withAuthenticator} from '@aws-amplify/ui-react';
+import { MarketingFooter } from './ui-components'
+
+
+
 
 Amplify.configure(awsExports);
 
@@ -43,6 +46,7 @@ const App = () => {
   }
 
   return (
+    <html>
     <div style={styles.container}>
       <h2>Amplify Todos</h2>
       <input
@@ -67,6 +71,10 @@ const App = () => {
         ))
       }
     </div>
+    <footer>
+    <MarketingFooter/>
+    </footer>
+    </html>
   )
 }
 
